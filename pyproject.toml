@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "income-tax"
+version = "0.1.0"
+description = ""
+authors = ["Karl Wooster <karl@woostertech.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pydantic = "^2.8.2"
+rich = "^13.8.0"
+pypdffill = {path = "../PyPDFFill", develop = true}
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.6.3"
+mypy = "^1.11.2"
+
+[tool.poetry.group.web]
+optional = true
+
+[tool.poetry.group.web.dependencies]
+flask = "^3.0.3"
+
+[tool.poetry.group.test]
+optional = true
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.2"
+pytest-sugar = "^1.0.0"
+pytest-cov = "^5.0.0"
+polyfactory = "^2.16.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
